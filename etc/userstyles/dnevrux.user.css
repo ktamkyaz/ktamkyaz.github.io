@@ -1,0 +1,254 @@
+/* ==UserStyle==
+@name           dnevnik.ru RE-UX (dnevrux) by ktamkyaz
+@namespace      github.com/openstyles/stylus
+@version        1.2.0
+@description    a really comfy dnevnik-ru style
+@author         ktamkyaz
+==/UserStyle== */
+
+@-moz-document url-prefix("https://dnevnik.ru/r/novgorod/") {
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Montserrat+Alternates:wght@300&display=swap');
+* {
+    overflow-y: none !important;
+    /*max-width: 99.3%;*/
+    --bg-scroll-fg: #44bef3;
+    --bg-scroll-bg: #072e4a;
+    --bg-url: url("https://i.redd.it/ac50gtyy1nue1.jpeg");
+    --card-scroll-fg: #4d44f3;
+    --card-scroll-bg: transparent;
+    --card-hover-bg: #44bef377;
+
+    --main-c-bg: linear-gradient(90deg, rgba(45, 125, 76, .28) 0%, rgba(12, 27, 18, .44) 50%, rgba(104, 66, 170, .5) 100%);
+    ;
+
+    --logo-clr: linear-gradient(90deg, #68f682 0%, #893ff0 100%);
+
+    font-family: "Didact Gothic", sans-serif;
+    font-weight: 400;
+    text-wrap: revert !important;
+    text-transform: lowercase;
+    font-style: normal;
+    transition: all 0.2s cubic-bezier(0.2, 0.84, 0, 0.97);
+}
+.tvlOr,
+.tvlOr * {
+    transition: none;
+}
+*:not(.header-menu *,
+.h26OT,
+.VDEyi,
+.c8gBb,
+.Hus5c,
+.FTvtj,
+.MF8i6,
+.ws3co,
+.QoB5a,
+.w_cWv,
+.Ugt7I,
+.tvlOr,
+.KiAcT,
+.NKKYj *) {
+    background: none;
+    color: #F8F8F2;
+    outline-color: #F8F8F2;
+    stroke: #F8F8F2;
+    border-color: #F8F8F2;
+}
+.GY6ZE {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+html {
+    scrollbar-color: var(--bg-scroll-fg) var(--bg-scroll-bg);
+}
+body {
+    background: #282A36 var(--bg-url) !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat!important;
+    background-attachment: fixed !important;
+    overflow-x: hidden !important;
+}
+.VC9lf {
+    flex-direction: column;
+}
+.GY6ZE,
+.QdrVr,
+.leaD4 {
+    width: 1050px;
+    max-width: none;
+}
+.page-header {
+    background: #44475A55;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90vw;
+}
+.header-menu {
+    position: absolute;
+}
+.page-header:not(:hover) {
+    height: 80px;
+    width: 500px;
+}
+.page-header:not(:hover) .user-counters {
+    opacity: 0;
+}
+.header-logotype {
+    background-image: none !important;
+    position: absolute;
+}
+.page-header__panel-container:first-child:has(.header-logotype):before {
+    content: 'dnevrux';
+    text-transform: none;
+    color: transparent;
+    text-decoration: none !important;
+    font-weight: 300 !important;
+    font-size: 40px;
+    width: 200px;
+    display: inline-flex;
+    align-items: center;
+    background: var(--logo-clr);
+    background-clip: text;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-style: normal;
+    justify-content: center;
+}
+.page-header__panel-container:first-child:has(.header-logotype):after {
+    content: 'project';
+    transform: translateX(150px) translateY(10px);
+    font-family: "Montserrat Alternates", sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.page-header:hover {
+    margin-bottom: 30vh;
+    padding-top: 3vh;
+}
+
+.page-header:not(:hover) .header-menu {
+    opacity: 0;
+    pointer-events: none;
+    height: 0;
+}
+.ZF51r img:not(.tBsiQ) {
+    filter: invert();
+}
+.user-profile-box__info_row.user-profile-box__avatar img {
+    opacity: 0;
+}
+.user-profile-box__info_row.user-profile-box__avatar:after {
+    content: "$";
+    font-size: 24px;
+    position: absolute;
+    transform: translateX(-100%);
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    color: #fff8;
+    background: #0003;
+    border-radius: 5px;
+}
+.NfpGu {
+    margin-top: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    order: -1;
+}
+.vYN7_ {
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    display: inline-flex;
+}
+.vYN7_:first-child {
+    border-right: 1px solid #d8d8d8;
+}
+.BPm32 {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom: 1px solid #d8d8d8;
+    border-left: 1px solid #d8d8d8;
+    border-right: 1px solid #d8d8d8;
+
+    display: flex;
+    justify-content: space-between;
+}
+.YFgHr {
+    display: flex;
+    justify-content: space-around;
+}
+.mfHwq {
+    min-height: 650px;
+}
+.jyOdp,
+.ltz6T {
+    display: block;
+    flex: none;
+    width: auto;
+}
+.T6N3R,
+.kjMue *,
+.GY6ZE > *,
+.Tamh1,
+.bGNJn.L10cW,
+.jAZTJ,
+.LizK_,
+.HhPlq,
+.wTqkl,
+.ADpUe.ZNAUN,
+.ZkfJb.itBBH,
+.wj5xj {
+    background: var(--main-c-bg);
+    backdrop-filter: blur(20px);
+}
+.GY6ZE div:has(.zuXmp) {
+    scrollbar-color: var(--card-scroll-fg) var(--card-scroll-bg);
+
+    overflow: overlay;
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    display: block;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    border-radius: 10px;
+    padding: 10px;
+    background: #00000024;
+}
+.zuXmp {
+    display: block;
+    width: 95%;
+    border: none;
+    max-width: none;
+    padding: 10px;
+}
+.tyRId.ujf4P:hover {
+    background: var(--card-hover-bg);
+    transition: 0.15s;
+    color: #efefef;
+}
+.d6iUb {
+    display: none;
+}
+.VC9lf {
+    margin: 0;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+/*
+  body:has(.zuXmp){
+    opacity: 0.2;
+    transform: scale(90%);
+  }*/
+}

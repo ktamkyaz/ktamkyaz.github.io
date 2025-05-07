@@ -7,7 +7,7 @@
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://dnevnik.ru/r/novgorod/") {
-@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Montserrat+Alternates:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Montserrat+Alternates:wght@300&display=swap');
 * {
     overflow-y: none !important;
     /*max-width: 99.3%;*/
@@ -23,7 +23,7 @@
 
     --logo-clr: linear-gradient(90deg, #68f682 0%, #893ff0 100%);
 
-    font-family: "Didact Gothic", sans-serif;
+    font-family: "Jost", sans-serif;
     font-weight: 400;
     text-wrap: revert !important;
     text-transform: lowercase;

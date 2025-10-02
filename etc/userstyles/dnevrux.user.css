@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           dnevnik.ru RE-UX (dnevrux) by ktamkyaz
 @namespace      github.com/openstyles/stylus
-@version        1.4
+@version        1.5
 @description    a really comfy dnevnik-ru style, now in black'n'white
 @author         ktamkyaz
 ==/UserStyle== */
@@ -12,7 +12,8 @@
 		/*max-width: 99.3%;*/
 		--bg-scroll-fg: #fff;
 		--bg-scroll-bg: transparent;
-		--bg-url: url("https://ktamkyaz.github.io/etc/userstyles/mono_dark_distortion_(from-raycast-wallpapers).webp"); /*source: https://www.raycast.com/wallpapers#:~:text=mono_dark_distortion_1*/
+		--bg-url: url("https://ktamkyaz.github.io/etc/userstyles/mono_dark_distortion_(from-raycast-wallpapers).webp");
+		/*source: https://www.raycast.com/wallpapers#:~:text=mono_dark_distortion_1*/
 		--bg-fallback: #222;
 		--card-scroll-fg: #323232;
 		--card-scroll-bg: transparent;
@@ -33,10 +34,12 @@
 		font-style: normal;
 		transition: all 0.5s cubic-bezier(0.2, 0.84, 0, 0.97);
 	}
+
 	.tvlOr,
 	.tvlOr * {
 		transition: none;
 	}
+
 	*:not(.header-menu *,
 	.h26OT,
 	.VDEyi,
@@ -44,10 +47,13 @@
 	.Hus5c,
 	.FTvtj,
 	.MF8i6,
+	.eWSLv *,
 	.ws3co,
+	.ukfNh *,
 	.QoB5a,
 	.w_cWv,
 	.Ugt7I,
+	.l6_hh.aeQxD *,
 	.tvlOr,
 	.KiAcT,
 	.NKKYj *,
@@ -58,17 +64,21 @@
 		stroke: #F8F8F2;
 		border-color: #F8F8F2;
 	}
+
 	.GY6ZE {
 		text-align: center;
 		display: flex;
 		flex-direction: column;
 	}
+
 	html {
 		scrollbar-color: var(--bg-scroll-fg) var(--bg-scroll-bg);
 	}
+
 	.la_kX > * {
 		background: #444;
 	}
+
 	body {
 		background: var(--bg-fallback) var(--bg-url) !important;
 		background-position: center !important;
@@ -78,15 +88,19 @@
 		overflow-x: hidden !important;
 		max-width: 98%;
 	}
+
 	.VC9lf {
 		flex-direction: column;
 	}
+
 	.GY6ZE,
 	.QdrVr,
-	.leaD4 {
+	.leaD4,
+	.l6_hh.aeQxD {
 		width: 1050px;
 		max-width: none;
 	}
+
 	.page-header {
 		background: var(--page-header-bg);
 		backdrop-filter: blur(10px);
@@ -95,23 +109,29 @@
 		margin-bottom: 10px;
 		width: 90vw;
 	}
+
 	.page-header:hover {
 		background: var(--page-header-hover-bg);
 	}
+
 	.header-menu {
 		position: absolute;
 	}
+
 	.page-header:not(:hover) {
 		height: 80px;
 		width: 500px;
 	}
+
 	.page-header:not(:hover) .user-counters {
 		opacity: 0;
 	}
+
 	.header-logotype {
 		background-image: none !important;
 		position: absolute;
 	}
+
 	.page-header__panel-container:first-child:has(.header-logotype):before {
 		content: 'dnevrux';
 		text-transform: none;
@@ -128,6 +148,7 @@
 		font-style: normal;
 		justify-content: center;
 	}
+
 	.page-header__panel-container:first-child:has(.header-logotype):after {
 		content: 'project';
 		transform: translateX(150px) translateY(10px);
@@ -136,6 +157,7 @@
 		top: 0;
 		left: 0;
 	}
+
 	.page-header:hover {
 		margin-bottom: 30vh;
 		padding-top: 3vh;
@@ -146,12 +168,15 @@
 		pointer-events: none;
 		height: 0;
 	}
+
 	.ZF51r img:not(.tBsiQ) {
 		filter: invert();
 	}
+
 	.user-profile-box__info_row.user-profile-box__ava tar img {
 		opacity: 0;
 	}
+
 	.user-profile-box__info_row.user-profile-box__avatar:after {
 		content: "$";
 		font-size: 24px;
@@ -167,21 +192,25 @@
 		background: #0003;
 		border-radius: 5px;
 	}
+
 	.NfpGu {
 		margin-top: 20px;
 		border-top-right-radius: 20px;
 		border-top-left-radius: 20px;
 		order: -1;
 	}
+
 	.vYN7_ {
 		border-left: none;
 		border-right: none;
 		width: 100%;
 		display: inline-flex;
 	}
+
 	.vYN7_:first-child {
 		border-right: 1px solid #d8d8d8;
 	}
+
 	.BPm32 {
 		border-bottom-left-radius: 20px;
 		border-bottom-right-radius: 20px;
@@ -192,19 +221,23 @@
 		display: flex;
 		justify-content: space-between;
 	}
+
 	.YFgHr {
 		display: flex;
 		justify-content: space-around;
 	}
+
 	.mfHwq {
 		min-height: 650px;
 	}
+
 	.jyOdp,
 	.ltz6T {
 		display: block;
 		flex: none;
 		width: auto;
 	}
+
 	.T6N3R,
 	.kjMue *,
 	.GY6ZE > *,
@@ -215,11 +248,18 @@
 	.HhPlq,
 	.wTqkl,
 	.ADpUe.ZNAUN,
+	.UNaap.rejG5,
 	.ZkfJb.itBBH,
+	.l6_hh.aeQxD,
+	.GfSJ6,
+	.iuLiH.UT8bj,
+	.ukfNh,
+	.qBQwZ,
 	.wj5xj {
 		background: var(--main-c-bg);
 		backdrop-filter: blur(20px);
 	}
+
 	.GY6ZE div:has(.zuXmp) {
 		scrollbar-color: var(--card-scroll-fg) var(--card-scroll-bg);
 
@@ -236,6 +276,7 @@
 		padding: 10px;
 		background: #00000024;
 	}
+
 	.zuXmp {
 		display: block;
 		width: 95%;
@@ -243,42 +284,59 @@
 		max-width: none;
 		padding: 10px;
 	}
+
 	.tyRId.ujf4P:hover {
 		background: var(--card-hover-bg);
 		transition: 0.15s;
 		color: var(--card-hover-fg);
 	}
+
 	.tyRId.ujf4P:hover * {
 		color: var(--card-hover-fg) !important;
 	}
+
 	.d6iUb {
 		display: none;
 	}
+
 	.VC9lf {
 		margin: 0;
 		width: 100%;
 		display: inline-flex;
 		align-items: center;
 	}
+
 	a,
 	.DvC8c,
 	.NtoA5,
-	.V0I1a {
+	.l6_hh.aeQxD,
+	.l6_hh.aeQxD *,
+	.V0I1a,
+	.ukfNh * {
 		color: #eef !important;
 	}
+
 	.uNSfG *:not(.V0I1a) {
 		display: none;
 	}
+
 	.header-menu__link {
 		background: #aaa;
 	}
+
 	.header-menu__item_active * {
 		background: #fff !important;
 	}
+
 	.header-submenu *,
 	.header-menu__item_active * {
 		color: #000 !important;
 	}
+
+	.UNaap.rejG5 {
+		border-radius: 20px
+	}
+
 	/*
   body:has(.zuXmp){
     opacity: 0.2;

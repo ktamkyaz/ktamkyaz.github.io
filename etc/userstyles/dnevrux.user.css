@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           dnevnik.ru RE-UX (dnevrux) by ktamkyaz
 @namespace      github.com/openstyles/stylus
-@version        1.5
+@version        1.6
 @description    a really comfy dnevnik-ru style, now in black'n'white
 @author         ktamkyaz
 ==/UserStyle== */
@@ -51,6 +51,7 @@
 	.ws3co,
 	.ukfNh *,
 	.QoB5a,
+		.F9Uxx,
 	.w_cWv,
 	.Ugt7I,
 	.l6_hh.aeQxD *,
@@ -69,7 +70,7 @@
 		text-align: center;
 		display: flex;
 		flex-direction: column;
-	}
+	} 
 
 	html {
 		scrollbar-color: var(--bg-scroll-fg) var(--bg-scroll-bg);
@@ -246,7 +247,9 @@
 	.jAZTJ,
 	.LizK_,
 	.HhPlq,
+	.F9Uxx,
 	.wTqkl,
+	.YEfNt,
 	.ADpUe.ZNAUN,
 	.UNaap.rejG5,
 	.ZkfJb.itBBH,

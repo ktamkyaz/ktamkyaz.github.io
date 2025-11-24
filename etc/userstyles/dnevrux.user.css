@@ -1,31 +1,32 @@
 /* ==UserStyle==
 @name           dnevnik.ru RE-UX (dnevrux) by ktamkyaz
 @namespace      github.com/openstyles/stylus
-@version        1.6
+@version        1.7
 @description    a really comfy dnevnik-ru style, now in black'n'white
 @author         ktamkyaz
 ==/UserStyle== */
-@-moz-document url-prefix("https://dnevnik.ru/r/novgorod/") {
+@-moz-document url-prefix("https://dnevnik.ru/") {
 	@import url('https://fonts.googleapis.com/css2?family=Jost&family=Montserrat+Alternates:wght@300&display=swap');
 	* {
 		overflow-y: none !important;
 		/*max-width: 99.3%;*/
 		--bg-scroll-fg: #fff;
 		--bg-scroll-bg: transparent;
-		--bg-url: url("https://ktamkyaz.github.io/etc/userstyles/mono_dark_distortion_(from-raycast-wallpapers).webp");
-		/*source: https://www.raycast.com/wallpapers#:~:text=mono_dark_distortion_1*/
+		--bg-url: url("https://i.redd.it/w6s26vk36o2g1.jpeg");
+		/*source: https://www.reddit.com/r/SonyAlpha/comments/1p39b62/white_walkers/*/
 		--bg-fallback: #222;
 		--card-scroll-fg: #323232;
 		--card-scroll-bg: transparent;
 		--card-hover-bg: #fffd;
 		--card-hover-fg: #000;
 
-		--page-header-bg: #3332;
+		--page-header-bg: #3336;
 		--page-header-hover-bg: #111c;
 
-		--main-c-bg: linear-gradient(90deg, rgba(45, 45, 45, .48) 0%, rgba(12, 14, 18, .84) 50%, rgba(104, 105, 105, .5) 100%);
+		--main-c-bg: linear-gradient(90deg, rgba(20, 25, 25, .18) 0%, rgba(12, 14, 18, .44) 50%, rgba(104, 105, 105, .3) 100%);
+		--main-c-fg: #eee;
 
-		--logo-clr: linear-gradient(90deg, #fff 0%, #444 100%);
+		--logo-clr: linear-gradient(90deg, #fff 0%, #eee 100%);
 
 		font-family: "Jost", sans-serif;
 		font-weight: 400;
@@ -51,7 +52,7 @@
 	.ws3co,
 	.ukfNh *,
 	.QoB5a,
-		.F9Uxx,
+	.F9Uxx,
 	.w_cWv,
 	.Ugt7I,
 	.l6_hh.aeQxD *,
@@ -60,7 +61,7 @@
 	.NKKYj *,
 	.la_kX) {
 		background: none;
-		color: #F8F8F2;
+		color: var(--main-c-fg);
 		outline-color: #F8F8F2;
 		stroke: #F8F8F2;
 		border-color: #F8F8F2;
@@ -70,7 +71,7 @@
 		text-align: center;
 		display: flex;
 		flex-direction: column;
-	} 
+	}
 
 	html {
 		scrollbar-color: var(--bg-scroll-fg) var(--bg-scroll-bg);
@@ -103,7 +104,7 @@
 	}
 
 	.page-header {
-		background: var(--page-header-bg);
+		background: var(--page-header-bg) !important;
 		backdrop-filter: blur(10px);
 		border-radius: 20px;
 		margin-top: 10px;
@@ -112,7 +113,7 @@
 	}
 
 	.page-header:hover {
-		background: var(--page-header-hover-bg);
+		background: var(--page-header-hover-bg) !important;
 	}
 
 	.header-menu {
@@ -249,7 +250,6 @@
 	.HhPlq,
 	.F9Uxx,
 	.wTqkl,
-	.YEfNt,
 	.ADpUe.ZNAUN,
 	.UNaap.rejG5,
 	.ZkfJb.itBBH,
@@ -296,6 +296,9 @@
 
 	.tyRId.ujf4P:hover * {
 		color: var(--card-hover-fg) !important;
+	}
+	.GY6ZE > * {
+		background: var(--main-c-bg) !important;
 	}
 
 	.d6iUb {

@@ -1,19 +1,27 @@
 /* ==UserStyle==
-@name           dnevnik.ru RE-UX (dnevrux) by ktamkyaz
+@name           dnevnik.ru RE-UX (dvrx) by ktamkyaz
 @namespace      github.com/openstyles/stylus
-@version        1.7
-@description    a really comfy dnevnik-ru style, now in black'n'white
+@version        1.8
+@description    a really comfy dnevnik-ru style
 @author         ktamkyaz
 ==/UserStyle== */
 @-moz-document url-prefix("https://dnevnik.ru/") {
-	@import url('https://fonts.googleapis.com/css2?family=Jost&family=Montserrat+Alternates:wght@300&display=swap');
+	@import url('https://fonts.googleapis.com/css2?&family=Montserrat+Alternates:wght@300&display=swap');
+	@font-face {
+		font-family: "Josefin Sans Ext";
+		src: url("https://cdn.jsdelivr.net/gh/dangermendez/JosefinSansExt@latest/JosefinSansExt-Regular.ttf") format("truetype");
+		font-weight: 400;
+		font-style: normal;
+		font-display: swap;
+	}
+
 	* {
 		overflow-y: none !important;
 		/*max-width: 99.3%;*/
 		--bg-scroll-fg: #fff;
 		--bg-scroll-bg: transparent;
-		--bg-url: url("https://i.redd.it/w6s26vk36o2g1.jpeg");
-		/*source: https://www.reddit.com/r/SonyAlpha/comments/1p39b62/white_walkers/*/
+		--bg-url: url("https://images.unsplash.com/photo-1641243422073-19d43790277f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0");
+		/*source: https://unsplash.com/photos/a-snowy-path-at-night-with-a-street-light-in-the-distance-bdY5E9EWh5o*/
 		--bg-fallback: #222;
 		--card-scroll-fg: #323232;
 		--card-scroll-bg: transparent;
@@ -23,12 +31,12 @@
 		--page-header-bg: #3336;
 		--page-header-hover-bg: #111c;
 
-		--main-c-bg: linear-gradient(90deg, rgba(20, 25, 25, .18) 0%, rgba(12, 14, 18, .44) 50%, rgba(104, 105, 105, .3) 100%);
+		--main-c-bg: linear-gradient(90deg, rgba(30, 25, 25, .73) 0%, rgba(25, 25, 25, .89) 50%, rgba(33, 33, 35, .8) 100%);
 		--main-c-fg: #eee;
 
 		--logo-clr: linear-gradient(90deg, #fff 0%, #eee 100%);
 
-		font-family: "Jost", sans-serif;
+		font-family: "Josefin Sans Ext", system-ui, sans-serif;
 		font-weight: 400;
 		text-wrap: revert !important;
 		text-transform: lowercase;
@@ -51,7 +59,9 @@
 	.eWSLv *,
 	.ws3co,
 	.ukfNh *,
+	.oPwnN *,
 	.QoB5a,
+	.dKqrI *,
 	.F9Uxx,
 	.w_cWv,
 	.Ugt7I,
@@ -62,9 +72,9 @@
 	.la_kX) {
 		background: none;
 		color: var(--main-c-fg);
-		outline-color: #F8F8F2;
+		outline-color: #6c6c6c;
 		stroke: #F8F8F2;
-		border-color: #F8F8F2;
+		border-color: #6c6c6c;
 	}
 
 	.GY6ZE {
@@ -99,8 +109,8 @@
 	.QdrVr,
 	.leaD4,
 	.l6_hh.aeQxD {
-		width: 1050px;
-		max-width: none;
+		width: 90vw;
+		max-width: 1200px;
 	}
 
 	.page-header {
@@ -135,7 +145,7 @@
 	}
 
 	.page-header__panel-container:first-child:has(.header-logotype):before {
-		content: 'dnevrux';
+		content: 'dvrx';
 		text-transform: none;
 		color: transparent;
 		text-decoration: none !important;
@@ -151,15 +161,14 @@
 		justify-content: center;
 	}
 
-	.page-header__panel-container:first-child:has(.header-logotype):after {
+	/* 	.page-header__panel-container:first-child:has(.header-logotype):after {
 		content: 'project';
 		transform: translateX(150px) translateY(10px);
 		font-family: "Montserrat Alternates", sans-serif;
 		position: absolute;
 		top: 0;
 		left: 0;
-	}
-
+	} */
 	.page-header:hover {
 		margin-bottom: 30vh;
 		padding-top: 3vh;
@@ -209,9 +218,6 @@
 		display: inline-flex;
 	}
 
-	.vYN7_:first-child {
-		border-right: 1px solid #d8d8d8;
-	}
 
 	.BPm32 {
 		border-bottom-left-radius: 20px;
@@ -229,10 +235,10 @@
 		justify-content: space-around;
 	}
 
+	/* 
 	.mfHwq {
 		min-height: 650px;
-	}
-
+	} */
 	.jyOdp,
 	.ltz6T {
 		display: block;
@@ -259,7 +265,10 @@
 	.ukfNh,
 	.qBQwZ,
 	.wj5xj {
-		background: var(--main-c-bg);
+		background: var(--main-c-bg) !important;
+	}
+
+	.zuXmp {
 		backdrop-filter: blur(20px);
 	}
 
@@ -296,9 +305,6 @@
 
 	.tyRId.ujf4P:hover * {
 		color: var(--card-hover-fg) !important;
-	}
-	.GY6ZE > * {
-		background: var(--main-c-bg) !important;
 	}
 
 	.d6iUb {
@@ -343,9 +349,92 @@
 		border-radius: 20px
 	}
 
+	.user-profile-box__info {
+		display: flex;
+		flex-direction: row;
+		width: 140px;
+		padding: 0;
+		padding-bottom: 5px;
+	}
+
 	/*
   body:has(.zuXmp){
     opacity: 0.2;
     transform: scale(90%);
   }*/
+	.wZsQ0 {
+		display: none;
+	}
+
+	.tyRId.ujf4P {
+		flex-direction: row;
+		gap: 25px;
+	}
+
+	.fEJxg {
+		flex-direction: column;
+		flex-wrap: wrap;
+		max-width: 80px;
+	}
+
+	/*marks*/
+	.ceyZF,
+	.L4zz0,
+	.nxTcy {
+		/*4/5/зч*/
+		background: linear-gradient(-30deg, #000 0%, #393939 100%);
+		color: #fff;
+	}
+
+	.VDEyi {
+		opacity: 0.2;
+	}
+
+	.Tnfcj,
+	.YiVWk,
+	.iZcVk {
+		/*3*/
+		background: linear-gradient(-45deg, #452674 0%, #000 70%);
+		color: #fff;
+	}
+
+	.qaGN7,
+	.pcufu {
+		/*2*/
+		/*note: for 2 in period css class unknown*/
+		background: linear-gradient(105deg, #592929 0%, #000 100%);
+		color: #fff;
+	}
+
+	.Ee_Ns {
+		/*п/о*/
+		background: #eee;
+		color: #000;
+	}
+
+	/*marks end*/
+	.ZkfJb.itBBH,
+	.Fy9Qq {
+		/*WHY????*/
+		display: none;
+	}
+
+	.h26OT {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.gq89N {
+		font-weight: 600;
+	}
+
+	.BPm32 {
+		border-radius: 0;
+	}
+
+	.fEJxg svg,
+	.ZF51r img.aatUS {
+		filter: grayscale();
+	}
 }

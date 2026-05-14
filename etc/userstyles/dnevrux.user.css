@@ -1,42 +1,33 @@
 /* ==UserStyle==
 @name           dnevnik.ru RE-UX (dvrx) by ktamkyaz
 @namespace      github.com/openstyles/stylus
-@version        1.8
+@version        1.9
 @description    a really comfy dnevnik-ru style
 @author         ktamkyaz
 ==/UserStyle== */
 @-moz-document url-prefix("https://dnevnik.ru/") {
-	@import url('https://fonts.googleapis.com/css2?&family=Montserrat+Alternates:wght@300&display=swap');
-	@font-face {
-		font-family: "Josefin Sans Ext";
-		src: url("https://cdn.jsdelivr.net/gh/dangermendez/JosefinSansExt@latest/JosefinSansExt-Regular.ttf") format("truetype");
-		font-weight: 400;
-		font-style: normal;
-		font-display: swap;
-	}
-
+	@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 	* {
 		overflow-y: none !important;
-		/*max-width: 99.3%;*/
 		--bg-scroll-fg: #fff;
 		--bg-scroll-bg: transparent;
-		--bg-url: url("https://images.unsplash.com/photo-1641243422073-19d43790277f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0");
-		/*source: https://unsplash.com/photos/a-snowy-path-at-night-with-a-street-light-in-the-distance-bdY5E9EWh5o*/
+		--bg-url: url("https://assets.ktkz.ru/dxru/background.jpg");
+		/* info: https://assets.ktkz.ru/dxru/background-info.htm */
 		--bg-fallback: #222;
 		--card-scroll-fg: #323232;
 		--card-scroll-bg: transparent;
-		--card-hover-bg: #fffd;
+		--card-hover-bg: #fffc;
 		--card-hover-fg: #000;
 
 		--page-header-bg: #3336;
 		--page-header-hover-bg: #111c;
 
-		--main-c-bg: linear-gradient(90deg, rgba(30, 25, 25, .73) 0%, rgba(25, 25, 25, .89) 50%, rgba(33, 33, 35, .8) 100%);
+		--main-c-bg: linear-gradient(90deg, rgba(25, 25, 25, .73) 0%, rgba(25, 25, 25, .89) 50%, rgba(33, 33, 35, .8) 100%);
 		--main-c-fg: #eee;
 
 		--logo-clr: linear-gradient(90deg, #fff 0%, #eee 100%);
 
-		font-family: "Josefin Sans Ext", system-ui, sans-serif;
+		font-family: "Google Sans", system-ui, sans-serif;
 		font-weight: 400;
 		text-wrap: revert !important;
 		text-transform: lowercase;
@@ -69,6 +60,8 @@
 	.tvlOr,
 	.KiAcT,
 	.NKKYj *,
+	.MoNUN,
+	.ieouB,
 	.la_kX) {
 		background: none;
 		color: var(--main-c-fg);
@@ -149,14 +142,14 @@
 		text-transform: none;
 		color: transparent;
 		text-decoration: none !important;
-		font-weight: 300 !important;
+		font-weight: 900 !important;
 		font-size: 40px;
 		width: 200px;
 		display: inline-flex;
 		align-items: center;
 		background: var(--logo-clr);
 		background-clip: text;
-		font-family: "Montserrat Alternates", sans-serif;
+		/* 		font-family: "Montserrat Alternates", sans-serif; */
 		font-style: normal;
 		justify-content: center;
 	}
@@ -184,24 +177,60 @@
 		filter: invert();
 	}
 
-	.user-profile-box__info_row.user-profile-box__ava tar img {
-		opacity: 0;
+	.user-profile-box__info_row.user-profile-box__avatar img {
+		border-radius: 50% !important;
+		overflow: hidden;
 	}
 
-	.user-profile-box__info_row.user-profile-box__avatar:after {
-		content: "$";
-		font-size: 24px;
-		position: absolute;
-		transform: translateX(-100%);
-		width: 30px;
-		height: 30px;
-		display: inline-flex;
-		align-items: flex-end;
-		justify-content: center;
-		text-align: center;
-		color: #fff8;
-		background: #0003;
-		border-radius: 5px;
+	.page-header * {
+		transition: none;
+	}
+
+	.header-submenu {
+		transition: opacity 0.3s;
+		display: block !important;
+		opacity: 0;
+		pointer-events: none;
+		border-radius: 20px;
+		border-top-left-radius: 0;
+	}
+
+	.header-menu__link {
+		transition: color 0.3s, background 0.3s, border-radius 0.3s;
+		background: #222 !important
+	}
+
+	.header-menu__item_active .header-menu__link {
+		color: #fff !important;
+		background: #222 !important;
+	}
+
+	.header-menu__link:hover,
+	.header-menu__item_current .header-menu__link {
+		color: #000 !important;
+		background: #fff !important;
+	}
+
+	.header-menu__item:first-child > .header-menu__link {
+		border-top-left-radius: 20px !important;
+	}
+
+	.header-menu__item:nth-last-child(-n + 2) .header-menu__link {
+		border-top-right-radius: 20px !important;
+	}
+
+	.clear:has(.header-menu) :not(.header-menu:has(.header-submenu_active)) .header-menu__item:first-child > .header-menu__link {
+		border-bottom-left-radius: 20px;
+	}
+
+	.clear:has(.header-menu) :not(.header-menu:has(.header-submenu_active)) .header-menu__item:nth-last-child(-n + 2) .header-menu__link {
+		border-bottom-right-radius: 20px;
+	}
+
+
+	.header-submenu.header-submenu_active {
+		top: 45px !important;
+		opacity: 1;
 	}
 
 	.NfpGu {
@@ -262,15 +291,13 @@
 	.l6_hh.aeQxD,
 	.GfSJ6,
 	.iuLiH.UT8bj,
+	.l6_hh.Am7vD,
 	.ukfNh,
 	.qBQwZ,
 	.wj5xj {
 		background: var(--main-c-bg) !important;
 	}
 
-	.zuXmp {
-		backdrop-filter: blur(20px);
-	}
 
 	.GY6ZE div:has(.zuXmp) {
 		scrollbar-color: var(--card-scroll-fg) var(--card-scroll-bg);
@@ -284,17 +311,26 @@
 		left: 50%;
 		transform: translateX(-50%);
 		z-index: 9999;
-		border-radius: 10px;
+		border-radius: 15px;
 		padding: 10px;
 		background: #00000024;
+		border: 0 !important;
+
+		backdrop-filter: blur(15px);
 	}
 
 	.zuXmp {
 		display: block;
 		width: 95%;
-		border: none;
+		border: none !important;
 		max-width: none;
 		padding: 10px;
+		min-height: 95%;
+		height: fit-content;
+		outline: none;
+		margin: 0;
+		box-shadow: none !important;
+		-webkit-box-shadow: none !important;
 	}
 
 	.tyRId.ujf4P:hover {
@@ -303,7 +339,13 @@
 		color: var(--card-hover-fg);
 	}
 
-	.tyRId.ujf4P:hover * {
+	svg:not(.YFgHr *,
+	.RP8vz *,
+	.nuwp2 *) * {
+		stroke: none !important;
+	}
+
+	body .tyRId.ujf4P:hover *:not(.n0QJN *) {
 		color: var(--card-hover-fg) !important;
 	}
 
@@ -324,6 +366,7 @@
 	.l6_hh.aeQxD,
 	.l6_hh.aeQxD *,
 	.V0I1a,
+	.l6_hh.Am7vD *,
 	.ukfNh * {
 		color: #eef !important;
 	}
@@ -362,7 +405,8 @@
     opacity: 0.2;
     transform: scale(90%);
   }*/
-	.wZsQ0 {
+	.wZsQ0,
+	.CYDkS {
 		display: none;
 	}
 
@@ -380,6 +424,8 @@
 	/*marks*/
 	.ceyZF,
 	.L4zz0,
+	.EeDN9,
+	.ieouB,
 	.nxTcy {
 		/*4/5/зч*/
 		background: linear-gradient(-30deg, #000 0%, #393939 100%);
@@ -392,6 +438,8 @@
 
 	.Tnfcj,
 	.YiVWk,
+	.wkfA9,
+	.MoNUN,
 	.iZcVk {
 		/*3*/
 		background: linear-gradient(-45deg, #452674 0%, #000 70%);
@@ -399,6 +447,8 @@
 	}
 
 	.qaGN7,
+	.CPrVf,
+	.B7KNj,
 	.pcufu {
 		/*2*/
 		/*note: for 2 in period css class unknown*/
@@ -407,10 +457,12 @@
 	}
 
 	.Ee_Ns {
-		/*п/о*/
+		/*п / о*/
 		background: #eee;
 		color: #000;
 	}
+
+
 
 	/*marks end*/
 	.ZkfJb.itBBH,
@@ -436,5 +488,45 @@
 	.fEJxg svg,
 	.ZF51r img.aatUS {
 		filter: grayscale();
+	}
+
+	.n0QJN {
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		overflow: hidden;
+		flex: none !important;
+		align-items: center;
+		justify-content: center;
+		margin-left: 5px !important;
+	}
+
+	.tyRId.ujf4P:hover * {
+		color: #fff !important;
+	}
+
+
+	.GY6ZE > * {
+		backdrop-filter: blur(5px);
+	}
+
+	.bGNJn.L10cW * {
+		height: fit-content;
+	}
+
+	.VMbV6 img {
+		max-width: 500px;
+		aspect-ratio: auto !important;
+		height: 200px;
+		object-fit: contain;
+	}
+
+	body .l6_hh.aeQxD *,
+	.nWUwg * {
+		border-color: #6c6c6c !important;
+	}
+
+	.nWUwg {
+		box-shadow: none !important;
 	}
 }
